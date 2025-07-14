@@ -4,6 +4,13 @@ require('dotenv').config();
 
 const { sendEveningReminders } = require('./functions/scheduler');
 
+
+(async () => {
+  console.log('🎯 TEST: Sending Placement WhatsApp message...');
+  await sendEveningReminders('Placement', 'Test Time');
+})();
+
+
 const app = express();
 const PORT = process.env.PORT || 4000;
 
@@ -12,6 +19,7 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.send('✅ Harsha Smart Tracker Backend is Live!');
 });
+
 
 cron.schedule('0 18 * * *', async () => {
   console.log('🧠 Sending DSA reminder at 6:00 PM...');
