@@ -5,10 +5,7 @@ require('dotenv').config();
 const { sendEveningReminders } = require('./functions/scheduler');
 
 
-(async () => {
-  console.log('🎯 TEST: Sending Placement WhatsApp message...');
-  await sendEveningReminders('Placement', 'Test Time');
-})();
+
 
 
 const app = express();
