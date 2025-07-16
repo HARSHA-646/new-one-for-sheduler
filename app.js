@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 4000;
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('✅ Harsha Smart Tracker Backend is Live!');
+  res.send('✅ Harsha Smart Tracker Backend ');
 });
 
 
